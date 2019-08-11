@@ -16,5 +16,5 @@ OUTFILE="kube.config"
 echo "Grabbing k8s config from Digital Ocean $CLUSTER_ID"
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${TF_VAR_do_token}" "https://api.digitalocean.com/v2/kubernetes/clusters/$CLUSTER_ID/kubeconfig" > $OUTFILE
 
-export kube.config to KUBECONFIG ENV
+# kube.config to KUBECONFIG ENV
 export KUBECONFIG=$PWD/kube.config
