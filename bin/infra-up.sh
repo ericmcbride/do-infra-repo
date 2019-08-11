@@ -1,6 +1,6 @@
 #!/bin/bash
-
 set -e
+
 # make sure the terraform plan is ok (check for envs, etc)
 cd $PWD/../tf && terraform init && terraform plan && terraform apply
 
